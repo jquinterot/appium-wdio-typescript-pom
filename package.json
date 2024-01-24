@@ -1,0 +1,18 @@
+{
+  "name": "appium-wdio-typescript",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.29.0",
+    "@wdio/cli": "^8.29.0",
+    "@wdio/cucumber-framework": "^8.29.0",
+    "@wdio/local-runner": "^8.29.0",
+    "@wdio/spec-reporter": "^8.29.0",
+    "appium": "^2.4.1",
+    "appium-uiautomator2-driver": "^2.42.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.ts"
+  }
+}
