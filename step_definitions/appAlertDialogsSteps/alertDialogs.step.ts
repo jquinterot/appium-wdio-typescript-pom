@@ -3,16 +3,18 @@ import { expect, $ } from "@wdio/globals";
 import { MainPage, AlertDialog, AppPage } from "../../pages";
 
 const mainPage = new MainPage;
-const alertDialog = new AlertDialog;
-const appPage = new AppPage;
 
 Given(/^user selects App demo$/, async () => {
   await mainPage.selectApp();
 });
 
+const appPage = new AppPage;
+
 When(/^selects Alert Dialogs$/, async () => {
   await appPage.selectAlertDialog();
 });
+
+const alertDialog = new AlertDialog;
 
 When(/^selects List Dialog$/, async () => {
   await alertDialog.selectListDIalog();
