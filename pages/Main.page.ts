@@ -4,7 +4,7 @@ import Page from "./page.js";
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class MainPage extends Page {
+export class MainPage extends Page {
   /**
    * define selectors using getter methods
    */
@@ -17,4 +17,3 @@ class MainPage extends Page {
   }
 }
 
-export default new MainPage();

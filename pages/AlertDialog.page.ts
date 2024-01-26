@@ -4,7 +4,7 @@ import Page from "./page.js";
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class AlertDialog extends Page {
+export class AlertDialog extends Page {
   /**
    * define selectors using getter methods
    */
@@ -31,5 +31,3 @@ class AlertDialog extends Page {
     await this.dropdownOption.click();
   }
 }
-
-export default new AlertDialog();

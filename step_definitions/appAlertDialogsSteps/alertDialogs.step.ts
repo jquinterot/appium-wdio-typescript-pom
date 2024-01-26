@@ -1,27 +1,29 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
 import { expect, $ } from "@wdio/globals";
-import MainPage from "../../pages/Main.page.ts";
-import AppPage from "../../pages/app.page.ts";
-import AlertDialogPage from "../../pages/AlertDialog.page.ts";
+import { MainPage, AlertDialog, AppPage } from "../../pages";
+
+const mainPage = new MainPage;
+const alertDialog = new AlertDialog;
+const appPage = new AppPage;
 
 Given(/^user selects App demo$/, async () => {
-  await MainPage.selectApp();
+  await mainPage.selectApp();
 });
 
 When(/^selects Alert Dialogs$/, async () => {
-  await AppPage.selectAlertDialog();
+  await appPage.selectAlertDialog();
 });
 
 When(/^selects List Dialog$/, async () => {
-  await AlertDialogPage.selectListDIalog();
+  await alertDialog.selectListDIalog();
 });
 
 When(/^selects Command two$/, async () => {
-  await AlertDialogPage.selectDropDownOption();
+  await alertDialog.selectDropDownOption();
 });
 
 Then(/^alert two confirmation message should be displayed$/, async () => {
-  await expect(await AlertDialogPage.selectedCommand).toHaveText(
+  await expect(await alertDialog.selectedCommand).toHaveText(
     "You selected: 1 , Command two"
   );
 });
